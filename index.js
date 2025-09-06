@@ -24,7 +24,7 @@ async function main() {
 //Index route
 app.get("/chats", async (req, res) => {
   let chats = await Chat.find();
-  console.log(chats);
+  //console.log(chats);
   //res.send("working");
   res.render("index.ejs", { chats });
 });
@@ -71,6 +71,14 @@ app.put("/chats/:id", async (req, res) => {
     { runValidators: true, new: true }
   );
   console.log(updatedChat);
+  res.redirect("/chats");
+});
+
+//Destroy route
+app.delete("/chats/:id", async (req, res) => {
+  let { id } = req.params;
+  let deletedChat = await Chat.findByIdAndDelete(id);
+  console.log(deletedChat);
   res.redirect("/chats");
 });
 
