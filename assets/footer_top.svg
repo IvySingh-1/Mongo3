@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="100%">
+  <defs>
+    <linearGradient id="cardGrad" x1="0" y1="0" x2="800" y2="270" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#3c2f2f" />
+      <stop offset="100%" stop-color="#4b3832" />
+    </linearGradient>
+    <style>
+      .card-title {
+        font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+        font-weight: 700;
+        fill: #be9b7b;
+        font-size: 20px;
+        letter-spacing: 0.5px;
+      }
+      .card-sub {
+        font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+        font-weight: 500;
+        fill: #fff4e6;
+        font-size: 14px;
+        opacity: 0.9;
+      }
+      .card-author {
+        font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+        font-weight: 600;
+        fill: #fff4e6;
+        font-size: 13px;
+        opacity: 0.85;
+      }
+      .card-ref {
+        font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+        font-weight: 500;
+        fill: #fff4e6;
+        font-size: 12px;
+        opacity: 0.75;
+      }
+      .card-email {
+        font-family: monospace, Courier, sans-serif;
+        fill: #be9b7b;
+        font-size: 13px;
+      }
+    </style>
+  </defs>
+  <!-- Background Card Top Part -->
+  <path d="M 2 200 L 2 16 A 16 16 0 0 1 18 2 L 782 2 A 16 16 0 0 1 798 16 L 798 200 Z" fill="url(#cardGrad)" />
+  <path d="M 2 200 L 2 16 A 16 16 0 0 1 18 2 L 782 2 A 16 16 0 0 1 798 16 L 798 200" fill="none" stroke="#be9b7b" stroke-width="2" />
+  
+  <!-- Content Center Aligned -->
+  <!-- Title -->
+  <text x="50%" y="45" text-anchor="middle" class="card-title">Thank you for exploring this project.</text>
+  
+  <!-- Subtitle -->
+  <text x="50%" y="75" text-anchor="middle" class="card-sub">If you found value in it, consider starring the repository.</text>
+  
+  <!-- Divider -->
+  <line x1="250" y1="100" x2="550" y2="100" stroke="#be9b7b" stroke-opacity="0.25" stroke-width="1"/>
+  
+  <!-- Author Info -->
+  <text x="50%" y="125" text-anchor="middle" class="card-author">Developed by Ivy Singh</text>
+  <text x="50%" y="145" text-anchor="middle" class="card-ref">full-stack software engineering reference</text>
+  
+  <!-- Email Box -->
+  <rect width="180" height="24" x="310" y="165" fill="rgba(190, 155, 123, 0.08)" rx="4" stroke="rgba(190, 155, 123, 0.25)" stroke-width="1"/>
+  <text x="50%" y="181" text-anchor="middle" class="card-email">ivysingh99@gmail.com</text>
+</svg>

@@ -17,13 +17,13 @@ The application relies on a solid, industry-standard stack for full-stack Node.j
 
 | Component | Technology | Description |
 | :--- | :--- | :--- |
-| **Runtime Environment** | Node.js | Asynchronous event-driven JavaScript runtime. |
-| **Web Server Framework** | Express.js | Core routing engine handling middleware pipeline and HTTP endpoints. |
-| **Database Engine** | MongoDB | Document-based database for scalable JSON-like records. |
-| **Object Data Mapper** | Mongoose | Strict schema validation, query generation, and document lifecycle control. |
-| **View Template Engine** | EJS | Embeds server-side logic directly into HTML pages. |
-| **Configuration Handler** | dotenv | Reads environment variables from untracked config files. |
-| **Method Override** | method-override | Intercepts POST requests to route them as PUT and DELETE operations. |
+| **Runtime Environment** | <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=node.js&logoColor=white" alt="Node.js"> | Asynchronous event-driven JavaScript runtime. |
+| **Web Server Framework** | <img src="https://img.shields.io/badge/Express.js-000000?style=flat-square&logo=express&logoColor=white" alt="Express.js"> | Core routing engine handling middleware pipeline and HTTP endpoints. |
+| **Database Engine** | <img src="https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white" alt="MongoDB"> | Document-based database for scalable JSON-like records. |
+| **Object Data Mapper** | <img src="https://img.shields.io/badge/Mongoose-880000?style=flat-square&logo=mongoose&logoColor=white" alt="Mongoose"> | Strict schema validation, query generation, and document lifecycle control. |
+| **View Template Engine** | <img src="https://img.shields.io/badge/EJS-B83B2C?style=flat-square" alt="EJS"> | Embeds server-side logic directly into HTML pages. |
+| **Configuration Handler** | <img src="https://img.shields.io/badge/dotenv-ECD53F?style=flat-square&logoColor=black" alt="dotenv"> | Reads environment variables from untracked config files. |
+| **Method Override** | <img src="https://img.shields.io/badge/method--override-854442?style=flat-square" alt="method-override"> | Intercepts POST requests to route them as PUT and DELETE operations. |
 
 ---
 
@@ -74,13 +74,13 @@ Connectly utilizes RESTful endpoints to manage the lifecycle of a chat document:
 
 | HTTP Method | URI Endpoint | Action Description | Database Operation | Response Method |
 | :--- | :--- | :--- | :--- | :--- |
-| **GET** | `/` | Root verification check | *No operation* | `res.send("root is working")` |
-| **GET** | `/chats` | Fetch and view all messages | `Chat.find()` | `res.render("index.ejs")` |
-| **GET** | `/chats/new` | Display new chat entry page | *No operation* | `res.render("new.ejs")` |
-| **POST** | `/chats` | Write a new message | `new Chat().save()` | `res.redirect("/chats")` |
-| **GET** | `/chats/:id/edit` | Display update form for a chat | `Chat.findById(id)` | `res.render("edit.ejs")` |
-| **PUT** | `/chats/:id` | Update chat message content | `Chat.findByIdAndUpdate(id)` | `res.redirect("/chats")` |
-| **DELETE** | `/chats/:id` | Remove a chat document | `Chat.findByIdAndDelete(id)` | `res.redirect("/chats")` |
+| <img src="https://img.shields.io/badge/GET-be9b7b?style=flat-square" alt="GET"> | `/` | Root verification check | *No operation* | `res.send("root is working")` |
+| <img src="https://img.shields.io/badge/GET-be9b7b?style=flat-square" alt="GET"> | `/chats` | Fetch and view all messages | `Chat.find()` | `res.render("index.ejs")` |
+| <img src="https://img.shields.io/badge/GET-be9b7b?style=flat-square" alt="GET"> | `/chats/new` | Display new chat entry page | *No operation* | `res.render("new.ejs")` |
+| <img src="https://img.shields.io/badge/POST-854442?style=flat-square" alt="POST"> | `/chats` | Write a new message | `new Chat().save()` | `res.redirect("/chats")` |
+| <img src="https://img.shields.io/badge/GET-be9b7b?style=flat-square" alt="GET"> | `/chats/:id/edit` | Display update form for a chat | `Chat.findById(id)` | `res.render("edit.ejs")` |
+| <img src="https://img.shields.io/badge/PUT-4b3832?style=flat-square" alt="PUT"> | `/chats/:id` | Update chat message content | `Chat.findByIdAndUpdate(id)` | `res.redirect("/chats")` |
+| <img src="https://img.shields.io/badge/DELETE-3c2f2f?style=flat-square" alt="DELETE"> | `/chats/:id` | Remove a chat document | `Chat.findByIdAndDelete(id)` | `res.redirect("/chats")` |
 
 ---
 
@@ -156,29 +156,7 @@ The server will bind to the configured port and listen at `http://localhost:8080
 
 ---
 
-<div align="center">
-
-### Thank you for exploring this project.
-If you found value in it, consider starring the repository.
-
----
-
-Developed by **Ivy Singh**
-
-*full-stack software engineering reference*
-
-`ivysingh99@gmail.com`
-
-<div style="margin-top: 15px;">
-<a href="https://github.com/IvySingh-1" target="_blank" style="text-decoration: none; margin: 0 5px;">
-<img src="https://img.shields.io/badge/-%20-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
-</a>
-<a href="https://www.linkedin.com/in/ivysingh99/" target="_blank" style="text-decoration: none; margin: 0 5px;">
-<img src="https://img.shields.io/badge/-%20-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
-</a>
-<a href="https://x.com/ivysingh99" target="_blank" style="text-decoration: none; margin: 0 5px;">
-<img src="https://img.shields.io/badge/-%20-000000?style=for-the-badge&logo=x&logoColor=white" alt="X" />
-</a>
-</div>
-
+<!-- FOOTER (SVG) -->
+<div align="center" style="margin-top: 40px;">
+<img src="./assets/footer_top.svg" width="100%" alt="Thank you for exploring this project. Developed by Ivy Singh."><br><img src="./assets/footer_bottom_left.svg" width="40.4%"><a href="https://github.com/IvySingh-1" target="_blank"><img src="./assets/footer_github.svg" width="5%" alt="GitHub"></a><img src="./assets/footer_gap1.svg" width="2%"><a href="https://www.linkedin.com/in/ivysingh99/" target="_blank"><img src="./assets/footer_linkedin.svg" width="5%" alt="LinkedIn"></a><img src="./assets/footer_gap2.svg" width="2%"><a href="https://x.com/ivysingh99" target="_blank"><img src="./assets/footer_x.svg" width="5%" alt="X"></a><img src="./assets/footer_bottom_right.svg" width="40.4%">
 </div>

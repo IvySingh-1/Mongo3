@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 70" width="2%">
+  <defs>
+    <linearGradient id="cardGrad" x1="-420" y1="-200" x2="380" y2="70" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#3c2f2f" />
+      <stop offset="100%" stop-color="#4b3832" />
+    </linearGradient>
+  </defs>
+  <!-- Background Card Gap 2 Part -->
+  <path d="M 0 0 L 16 0 L 16 68 L 0 68 Z" fill="url(#cardGrad)" />
+  <path d="M 0 68 L 16 68" fill="none" stroke="#be9b7b" stroke-width="2" />
+</svg>
