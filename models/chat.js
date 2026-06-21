@@ -11,7 +11,7 @@ const chatSchema = new mongoose.Schema({
   },
   msg: {
     type: String,
-    maxLength: 50,
+    maxLength: 500,
   },
   created_at: {
     type: Date,
@@ -19,6 +19,6 @@ const chatSchema = new mongoose.Schema({
   },
 });
 
-const Chat=mongoose.model("Chat",chatSchema);
+const Chat = mongoose.model("Chat", chatSchema);
 
-module.exports=Chat;
+module.exports = Chat;

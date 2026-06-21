@@ -7,11 +7,43 @@
     <link rel="stylesheet" href="/new.css" />
   </head>
   <body>
+    <!-- Floating Background Doodles -->
+    <div class="floating-doodle doodle-1">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+      </svg>
+    </div>
+    <div class="floating-doodle doodle-2">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+      </svg>
+    </div>
+    <div class="floating-doodle doodle-3">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+      </svg>
+    </div>
+    <div class="floating-doodle doodle-4">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+      </svg>
+    </div>
+    <div class="floating-doodle doodle-5">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 0 1-3.46 0"/>
+      </svg>
+    </div>
+
+    <!-- Floating CRUD text -->
+    <div class="floating-text crud-word-1">CRUD</div>
+    <div class="floating-text crud-word-2">CRUD</div>
+    <div class="floating-text crud-word-3">CRUD</div>
+
     <h3>Write new chat..</h3>
     <form method="POST" action="/chats">
       <input placeholder="who are you?" name="from" />
       <br /><br />
-      <textarea name="msg" id="">Write your message here..</textarea>
+      <textarea name="msg" id="" placeholder="Write your message here.."></textarea>
       <br /><br />
       <input type="text" placeholder="add receiver" name="to" />
       <br /><br />

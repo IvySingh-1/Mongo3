@@ -31,8 +31,6 @@ app.get("/chats", async (req, res) => {
 
 //New Route
 app.get("/chats/new", (req, res) => {
-
-  console.log("hi from /chats/new");
   res.render("new.ejs");
 });
 
