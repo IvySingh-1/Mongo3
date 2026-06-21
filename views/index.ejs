@@ -7,6 +7,9 @@
     <title>Connectly - Mini Whatsapp</title>
   </head>
   <body>
+    <div class="top-nav">
+      <button class="btn-about" id="about-btn">About Connectly</button>
+    </div>
     <p class="title">Connectly</p>
     <p class="tagline">Streamlined chat. Unlimited potential.</p>
 
@@ -39,5 +42,52 @@
     <br />
     <br />
     <% } %>
+
+    <!-- Modal for About Connectly -->
+    <div id="about-modal" class="modal-overlay">
+      <div class="modal-box">
+        <button class="modal-close" id="close-modal">&times;</button>
+        <div class="modal-body">
+          <h2>Welcome to Connectly! 💬</h2>
+          <p>
+            Connectly is a lightweight, server-side rendered chat repository designed as a hands-on learning project to master full-stack web development and database management. It functions as a complete CRUD (Create, Read, Update, Delete) application, demonstrating how a web server communicates with a database to persist data.
+          </p>
+          <h3>Key Features & Learning Focus:</h3>
+          <ul>
+            <li><strong>Complete CRUD Operations:</strong> Learn how to create, retrieve, edit, and delete chat records stored in a database.</li>
+            <li><strong>RESTful Routing:</strong> The backend server in <code>index.js</code> is structured around REST principles, mapping HTTP methods (GET, POST, PUT, DELETE) to database actions.</li>
+            <li><strong>Database Schema & Validation:</strong> Mongoose models in <code>models/chat.js</code> demonstrate how to structure documents, specify types, and enforce validation constraints (such as required fields and maximum lengths).</li>
+            <li><strong>Data Seeding:</strong> An initialization script <code>init.js</code> populates MongoDB with sample records to demonstrate database staging.</li>
+            <li><strong>Server-Side Templating:</strong> Dynamic views are rendered on the fly using EJS (Embedded JavaScript) templates combined with raw CSS styling.</li>
+          </ul>
+          <p>
+            Connectly serves as a clean, practical reference for setting up backend architectures, routing requests, and managing database connections.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const aboutBtn = document.getElementById("about-btn");
+      const aboutModal = document.getElementById("about-modal");
+      const closeModal = document.getElementById("close-modal");
+
+      // Open Modal
+      aboutBtn.addEventListener("click", () => {
+        aboutModal.style.display = "flex";
+      });
+
+      // Close Modal
+      closeModal.addEventListener("click", () => {
+        aboutModal.style.display = "none";
+      });
+
+      // Close modal when clicking outside of the modal content
+      window.addEventListener("click", (e) => {
+        if (e.target === aboutModal) {
+          aboutModal.style.display = "none";
+        }
+      });
+    </script>
   </body>
 </html>
