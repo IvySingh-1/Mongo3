@@ -467,3 +467,108 @@ form {
         transform: translateY(0px) rotate(0deg);
     }
 }
+
+/* Creative Footer Styles */
+.main-footer {
+    background: rgba(255, 244, 230, 0.05);
+    backdrop-filter: blur(10px);
+    border-top: 2px solid rgba(190, 155, 123, 0.4);
+    border-radius: 24px 24px 0 0;
+    padding: 30px 20px;
+    margin-top: 60px;
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-bottom: -20px;
+    box-sizing: border-box;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.footer-info p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.copyright {
+    color: rgba(255, 244, 230, 0.8);
+    font-weight: 400;
+}
+
+.developer {
+    color: #fff4e6;
+    font-weight: 500;
+}
+
+.dev-name {
+    color: #be9b7b;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    border-bottom: 1px dashed rgba(190, 155, 123, 0.5);
+    padding-bottom: 2px;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 15px;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 244, 230, 0.1);
+    color: #fff4e6;
+    border: 1px solid rgba(190, 155, 123, 0.3);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.social-link svg {
+    width: 18px;
+    height: 18px;
+}
+
+.social-link:hover {
+    background: linear-gradient(135deg, #be9b7b 0%, #854442 100%);
+    color: #fff4e6;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(60, 47, 47, 0.4);
+    border-color: transparent;
+}
+
+@media (max-width: 768px) {
+    .main-footer {
+        margin-left: -12px;
+        margin-right: -12px;
+        margin-bottom: -12px;
+        padding: 25px 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-info {
+        align-items: center;
+    }
+}
