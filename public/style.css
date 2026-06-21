@@ -12,54 +12,86 @@ body {
     color: #fff4e6;
 }
 
-/* Header Section - Connectly Title & Tagline */
-.header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin-bottom: 40px;
-    padding: 20px 0;
+/* Navbar Styles */
+.navbar {
+    background: rgba(255, 244, 230, 0.05);
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid rgba(190, 155, 123, 0.3);
+    padding: 8px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-top: -20px;
+    margin-bottom: 30px;
 }
 
-.title {
-    font-size: 3.5rem;
+.navbar-container {
+    max-width: 700px; /* Aligns container alignment with chat box width */
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.navbar-title {
+    font-size: 1.8rem;
     font-weight: 700;
+    margin: 0;
     background: linear-gradient(135deg, #fff4e6 0%, #be9b7b 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    margin: 0 auto;
-    text-shadow: 0 4px 8px rgba(60, 47, 47, 0.3);
     letter-spacing: -0.5px;
-    line-height: 1.1;
-    text-align: center;
 }
 
-.tagline {
-    font-size: 1.1rem;
-    color: rgba(255, 244, 230, 0.9);
-    margin: 8px auto 0 auto;
-    font-weight: 400;
-    letter-spacing: 0.3px;
-    text-shadow: 0 2px 4px rgba(60, 47, 47, 0.2);
-    text-align: center;
+.navbar-tagline {
+    font-size: 0.85rem;
+    color: rgba(255, 244, 230, 0.8);
+    margin-top: 2px;
 }
 
-/* Responsive adjustments for title/tagline */
+.navbar-actions {
+    display: flex;
+    align-items: center;
+}
+
 @media (max-width: 768px) {
-    .title {
-        font-size: 2.5rem;
+    .navbar {
+        margin-left: -12px;
+        margin-right: -12px;
+        margin-top: -12px;
+        padding: 12px 15px;
     }
+}
 
-    .tagline {
-        font-size: 1rem;
+@media (max-width: 600px) {
+    .navbar-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 12px;
     }
-
-    .header {
-        margin-bottom: 30px;
-        padding: 15px 0;
+    
+    .navbar-brand {
+        align-items: center;
+    }
+    
+    .navbar-title {
+        font-size: 1.75rem;
+    }
+    
+    .navbar-tagline {
+        font-size: 0.8rem;
     }
 }
 
@@ -98,13 +130,20 @@ form[action="/chats/new"] button:hover {
 }
 
 /* Chat container */
+/* Main content container */
+.main-content {
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
 .chat {
     background: rgba(255, 244, 230, 0.95);
     backdrop-filter: blur(10px);
     padding: 20px;
     border-radius: 16px;
-    margin: 0 auto 20px auto;
-    max-width: 600px;
+    margin-bottom: 20px;
     width: 100%;
     box-sizing: border-box;
     box-shadow:
@@ -235,19 +274,13 @@ form {
 }
 
 /* About Connectly Button & Modal Styling */
-.top-nav {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-}
-
 .btn-about {
     background: linear-gradient(135deg, #be9b7b 0%, #854442 100%);
     color: #fff4e6;
     border: none;
-    padding: 12px 24px;
-    border-radius: 25px;
-    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 0.9rem;
     font-weight: 600;
     cursor: pointer;
     box-shadow: 0 4px 12px rgba(60, 47, 47, 0.3);
@@ -365,11 +398,6 @@ form {
 }
 
 @media (max-width: 768px) {
-    .top-nav {
-        position: static;
-        margin-bottom: 20px;
-        text-align: left;
-    }
     
     .modal-box {
         padding: 20px;
@@ -488,7 +516,7 @@ form {
     align-items: center;
     flex-wrap: wrap;
     gap: 20px;
-    max-width: 600px;
+    max-width: 700px;
     width: 100%;
     margin: 0 auto;
 }
@@ -571,4 +599,34 @@ form {
     .footer-info {
         align-items: center;
     }
+}
+
+/* Floating CRUD Text */
+.floating-text {
+    position: fixed;
+    pointer-events: none;
+    z-index: -1;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    font-weight: 900;
+    font-size: 5rem;
+    color: #be9b7b;
+    opacity: 0.06;
+}
+
+.crud-word-1 {
+    top: 25%;
+    left: 8%;
+    animation: float-slow 18s ease-in-out infinite;
+}
+
+.crud-word-2 {
+    top: 55%;
+    right: 10%;
+    animation: float-reverse 22s ease-in-out infinite;
+}
+
+.crud-word-3 {
+    bottom: 20%;
+    left: 15%;
+    animation: float-slow 20s ease-in-out infinite;
 }

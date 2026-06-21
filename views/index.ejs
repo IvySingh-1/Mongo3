@@ -34,13 +34,25 @@
       </svg>
     </div>
 
-    <div class="top-nav">
-      <button class="btn-about" id="about-btn">About Connectly</button>
-    </div>
-    <p class="title">Connectly</p>
-    <p class="tagline">Streamlined chat. Unlimited potential.</p>
+    <!-- Floating CRUD text -->
+    <div class="floating-text crud-word-1">CRUD</div>
+    <div class="floating-text crud-word-2">CRUD</div>
+    <div class="floating-text crud-word-3">CRUD</div>
 
-    <h3>All Chats!</h3>
+    <nav class="navbar">
+      <div class="navbar-container">
+        <div class="navbar-brand">
+          <h1 class="navbar-title">Connectly</h1>
+          <span class="navbar-tagline">Streamlined chat. Unlimited potential.</span>
+        </div>
+        <div class="navbar-actions">
+          <button class="btn-about" id="about-btn">About Connectly</button>
+        </div>
+      </div>
+    </nav>
+
+    <main class="main-content">
+      <h3>All Chats!</h3>
 
     <form method="GET" action="/chats/new">
       <button>New Chat</button>
@@ -69,6 +81,7 @@
     <br />
     <br />
     <% } %>
+    </main>
 
     <footer class="main-footer">
       <div class="footer-content">
