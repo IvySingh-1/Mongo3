@@ -18,7 +18,7 @@ main()
   .catch((err) => console.log(err));
 
 async function main() {
-  await mongoose.connect("mongodb://127.0.0.1:27017/whatsapp");
+  await mongoose.connect("mongodb://127.0.0.1:27017/connectly");
 }
 
 //Index route
@@ -31,6 +31,8 @@ app.get("/chats", async (req, res) => {
 
 //New Route
 app.get("/chats/new", (req, res) => {
+
+  console.log("hi from /chats/new");
   res.render("new.ejs");
 });
 
@@ -44,13 +46,13 @@ app.post("/chats", (req, res) => {
     created_at: new Date(),
   });
   newChat
-    .save()
-    .then((res) => {
-      console.log("chat was saved");
-    })
-    .catch((err) => {
-      console.log(err);
-    });
+  .save()
+  .then((res) => {
+    console.log("chat was saved");
+  })
+  .catch((err) => {
+    console.log(err);
+  });
   res.redirect("/chats");
 });
 
