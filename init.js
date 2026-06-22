@@ -1,6 +1,7 @@
 require("dotenv").config();
 const mongoose = require("mongoose");
 const Chat = require("./models/chat.js");
+const dbUrl = process.env.ATLASDB_URL;
 
 main()
   .then(() => {
@@ -9,7 +10,7 @@ main()
   .catch((err) => console.log(err));
 
 async function main() {
-  await mongoose.connect(process.env.ATLASDB_URL);
+  await mongoose.connect(dbUrl);
 }
 
 let allChats = [
