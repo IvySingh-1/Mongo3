@@ -1,49 +1,45 @@
 require("dotenv").config();
+
 const mongoose = require("mongoose");
 const Chat = require("./models/chat.js");
+
 const dbUrl = process.env.ATLASDB_URL;
-
-main()
-  .then(() => {
-    console.log("connection successful");
-  })
-  .catch((err) => console.log(err));
-
-async function main() {
-  await mongoose.connect(dbUrl);
-}
 
 let allChats = [
   {
-    from: "priya",
-    to: "neha",
-    msg: "hi how are you",
+    from: "Ishita",
+    to: "Arjun",
+    msg: "Good luck for your interview today.",
     created_at: new Date(),
   },
   {
-    from: "shantanu",
-    to: "rohan",
-    msg: "all the best",
+    from: "Ivy",
+    to: "Yash",
+    msg: "Hey, are we meeting after class today?",
     created_at: new Date(),
   },
   {
-    from: "siddhi",
-    to: "kashish",
-    msg: "today is a beautiful day",
+    from: "Neha",
+    to: "Vikram",
+    msg: "Can you send me the notes?",
     created_at: new Date(),
-  },
-  {
-    from: "alice",
-    to: "sanya",
-    msg: "you look stunning",
-    created_at: new Date(),
-  },
-  {
-    from: "meera",
-    to: "lakshmi",
-    msg: "weather is pleasant",
-    created_at: new Date(),
-  },
+  }
 ];
 
-Chat.insertMany(allChats);
+async function main() {
+  try {
+    await mongoose.connect(dbUrl);
+
+    console.log("connection successful");
+
+    await Chat.insertMany(allChats);
+
+    console.log("Data inserted");
+
+    await mongoose.connection.close();
+  } catch (err) {
+    console.log(err);
+  }
+}
+
+main();
