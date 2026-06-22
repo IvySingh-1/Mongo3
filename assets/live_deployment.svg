@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 40" width="100%">
+  <defs>
+    <linearGradient id="btnGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#be9b7b" />
+      <stop offset="100%" stop-color="#854442" />
+    </linearGradient>
+    <style>
+      .btn-text {
+        font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+        font-weight: 700;
+        fill: #fff4e6;
+        font-size: 14px;
+        letter-spacing: 0.5px;
+      }
+      .btn-container {
+        cursor: pointer;
+      }
+    </style>
+  </defs>
+  <g class="btn-container">
+    <!-- Rounded Button Background -->
+    <rect x="2" y="2" width="196" height="36" fill="url(#btnGrad)" rx="18" stroke="#fff4e6" stroke-width="1.5" stroke-opacity="0.3"/>
+    <!-- Button Text -->
+    <text x="100" y="23" text-anchor="middle" class="btn-text">Live Deployment</text>
+  </g>
+</svg>

@@ -2,6 +2,12 @@
   <img src="public/banner.svg" alt="Connectly Banner" width="100%">
 </p>
 
+<p align="center">
+  <a href="https://connectly-7yyc.onrender.com/chats" target="_blank">
+    <img src="assets/live_deployment.svg" alt="Live Deployment" width="200">
+  </a>
+</p>
+
 ## Overview
 
 Connectly is a lightweight, server-side rendered messaging application built as a learning project to master backend API routing, database schema design, and document validations. Structuring the project around the Model-View-Controller (MVC) conceptual pattern, the server facilitates robust, stateful CRUD (Create, Read, Update, and Delete) operations on chat documents.
