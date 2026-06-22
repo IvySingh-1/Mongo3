@@ -19,7 +19,7 @@ main()
   .catch((err) => console.log(err));
 
 async function main() {
-  await mongoose.connect(process.env.MONGO_URI);
+  await mongoose.connect(process.env.ATLASDB_URL);
 }
 
 //Index route
